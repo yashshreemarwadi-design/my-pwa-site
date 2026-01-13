@@ -4,57 +4,67 @@
   <meta charset="UTF-8">
   <title>My Portfolio</title>
 
-  <!-- PWA Manifest -->
-  <link rel="manifest" href="./manifest.json">
-
-  <!-- CSS (inside HTML) -->
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #667eea, #764ba2);
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      color: #fff;
     }
 
     header {
-      background: yellow;
+      padding: 60px 20px;
       text-align: center;
-      padding: 40px 20px;
     }
 
     header h1 {
-      margin: 0;
-      color: #764ba2;
+      font-size: 42px;
+      margin-bottom: 10px;
     }
 
     header p {
-      color: #555;
-      font-size: 16px;
+      font-size: 18px;
+      opacity: 0.9;
     }
 
-    .card {
-      background: pink;
+    section {
+      background: #ffffff;
+      color: #333;
       margin: 20px;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
-    .card h2 {
-      color: #667eea;
+    section h2 {
+      color: #c33764;
       margin-top: 0;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
     }
 
-    ul {
-      padding-left: 20px;
+    .skills span {
+      display: inline-block;
+      background: #1d2671;
+      color: #fff;
+      padding: 8px 14px;
+      margin: 6px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .project {
+      background: #f7f7f7;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 10px;
     }
 
     footer {
-      background: #222;
-      color: white;
       text-align: center;
-      padding: 15px;
-      margin-top: 30px;
+      padding: 20px;
+      font-size: 14px;
+      opacity: 0.8;
     }
   </style>
 </head>
@@ -63,48 +73,53 @@
 
   <header>
     <h1>Yashshree Marwadi</h1>
-    <p>Web Developer | AI Learner</p>
+    <p>Web Developer | AI & PWA Learner</p>
   </header>
 
-  <div class="card">
+  <section>
     <h2>About Me</h2>
     <p>
-      I am a beginner web developer learning HTML, CSS, AI and PWA development.
-      I enjoy building simple and useful websites.
+      I am a beginner web developer learning HTML, CSS, GitHub and
+      Progressive Web Apps. I enjoy creating simple, clean and useful
+      websites using modern tools and AI.
     </p>
-  </div>
+  </section>
 
-  <div class="card">
+  <section>
     <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>GitHub</li>
-      <li>AI Basics</li>
-      <li>PWA</li>
-    </ul>
-  </div>
+    <div class="skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>GitHub</span>
+      <span>AI Basics</span>
+      <span>PWA</span>
+      <span>Website Design</span>
+    </div>
+  </section>
 
-  <div class="card">
+  <section>
     <h2>Projects</h2>
-    <ul>
-      <li>Portfolio Website</li>
-      <li>HTML Practice Website</li>
-      <li>PWA Demo App</li>
-    </ul>
-  </div>
+
+    <div class="project">
+      <strong>Portfolio Website</strong>
+      <p>A personal portfolio website created using HTML and CSS.</p>
+    </div>
+
+    <div class="project">
+      <strong>PWA Demo App</strong>
+      <p>A simple website converted into a Progressive Web App.</p>
+    </div>
+
+    <div class="project">
+      <strong>HTML Practice Website</strong>
+      <p>Basic website created for learning HTML structure.</p>
+    </div>
+
+  </section>
 
   <footer>
-    <p>© 2026 My Portfolio</p>
+    © 2026 | My Portfolio
   </footer>
-
-  <!-- Service Worker -->
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("./service-worker.js");
-    }
-  </script>
 
 </body>
 </html>
-
